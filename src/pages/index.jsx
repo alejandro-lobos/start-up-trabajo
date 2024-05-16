@@ -1,3 +1,4 @@
+import IconsCarousel from "@/components/IconsCarousel";
 import Navbar from "@/components/Navbar";
 import Head from "next/head"; // Para definir elementos en el <head> de tu documento HTML
 
@@ -13,7 +14,7 @@ export default function Home() {
             <link rel="apple-touch-icon" sizes="180x180" href="/images/pegaic.jpg" />
         </Head>
         <Navbar />
-      <main >
+      <main className="w-full h-screen bg-pink-50">
       </main>
     </div>
   );
