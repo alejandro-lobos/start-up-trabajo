@@ -28,40 +28,35 @@ const IconsCarousel = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 6,  // Mostrar 6 iconos por vez en pantallas grandes
-    slidesToScroll: 2,
+    slidesToShow: 5,  // Mostrar 6 iconos por vez en pantallas grandes
+    slidesToScroll: 3,
     responsive: [
+      
       {
-        breakpoint: 1024,
+        breakpoint: 500,
         settings: {
-          slidesToShow: 5,  // Mostrar 4 iconos por vez en pantallas medianas
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 4,  // Mostrar 2 iconos por vez en pantallas pequeñas
-          slidesToScroll: 1,
+          slidesToShow: 3,  // Mostrar 2 iconos por vez en pantallas pequeñas
+          slidesToScroll: 2,
         },
       },
     ],
   };
 
   return (
-    <div className="py-4 w-full flex flex-col mt-10">
+    <div className="py-4 w-[90%] flex flex-col ">
       <div className="w-full slider-container px-4">
         <Slider {...settings}>
           {iconData.map((item, index) => (
-            <div key={index} className="flex justify-center  mx-2">
+            <div key={index} >
+              <div className=' flex flex-col justify-center items-center text-center'>
               <a
                 href="/proyectos"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center "
               >
                 <IconButton icon={item.icon} label={item.label} />
               </a>
+              </div>
             </div>
           ))}
         </Slider>
